@@ -9,13 +9,12 @@ CREATE TABLE [dbo].[CurrencyCodes] (
     CONSTRAINT [PK_CurrencyCodes] PRIMARY KEY CLUSTERED ([CurrencyCodeID] ASC)
 );
 
+
 GO
 
--- Unique constraint: Only one record can have IsDefaultCurrency = 1
 CREATE UNIQUE NONCLUSTERED INDEX [IX_CurrencyCodes_IsDefaultCurrency]
-    ON [dbo].[CurrencyCodes] ([IsDefaultCurrency])
-    WHERE [IsDefaultCurrency] = 1;
+    ON [dbo].[CurrencyCodes]([IsDefaultCurrency] ASC) WHERE ([IsDefaultCurrency]=(1));
+
 
 GO
-
 
