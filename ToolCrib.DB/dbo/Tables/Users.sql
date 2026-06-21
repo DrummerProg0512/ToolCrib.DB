@@ -9,7 +9,8 @@ CREATE TABLE [dbo].[Users] (
     [UserRoleID]   INT            NOT NULL,
     [UserTypeID]   INT            NOT NULL,
     CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([UserID] ASC),
-    CONSTRAINT [FK_Users_UserRoles] FOREIGN KEY ([UserRoleID]) REFERENCES [dbo].[UserRoles] ([UserRoleID])
+    CONSTRAINT [FK_Users_UserRoles] FOREIGN KEY ([UserRoleID]) REFERENCES [dbo].[UserRoles] ([UserRoleID]),
+    CONSTRAINT [FK_Users_UserTypes] FOREIGN KEY ([UserTypeID]) REFERENCES [dbo].[UserTypes] ([UserTypeID])
 );
 
 
