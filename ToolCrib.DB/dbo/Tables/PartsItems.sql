@@ -11,7 +11,7 @@ CREATE TABLE [dbo].[PartsItems] (
     [PartCode]           NVARCHAR (250)  CONSTRAINT [DF_PartsItems_PartCode] DEFAULT ('') NOT NULL,
     [PartActive]         BIT             CONSTRAINT [DF_PartsItems_PartActive] DEFAULT ((1)) NOT NULL,
     [UpdatedBy]          INT             NOT NULL,
-    [UpdatedOn]          DATETIME2 (2)   CONSTRAINT [DF_PartsItems_UpdatedOn] DEFAULT (getdate()) NOT NULL,
+    [UpdatedOn]          DATETIME2 (3)   CONSTRAINT [DF_PartsItems_UpdatedOn] DEFAULT (getdate()) NOT NULL,
     [UOM_ID]             INT             NOT NULL,
     [PartUsageTypeID]    INT             NOT NULL,
     [PartTrackingTypeID] INT             NOT NULL,

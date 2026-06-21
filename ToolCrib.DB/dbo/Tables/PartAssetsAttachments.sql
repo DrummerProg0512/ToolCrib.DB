@@ -8,10 +8,11 @@ CREATE TABLE [dbo].[PartAssetsAttachments] (
     [MimeType]               NVARCHAR (50)   CONSTRAINT [DF_PartAssetsAttachments_MimeType] DEFAULT ('') NOT NULL,
     [FileSize]               INT             NOT NULL,
     [ImageActive]            BIT             CONSTRAINT [DF_PartAssetsAttachments_ImageActive] DEFAULT ((1)) NOT NULL,
-    [UploadedOn]             DATETIME        CONSTRAINT [DF_PartAssetsAttachments_UploadedOn] DEFAULT (getdate()) NOT NULL,
+    [UploadedOn]             DATETIME2 (3)   CONSTRAINT [DF_PartAssetsAttachments_UploadedOn] DEFAULT (getdate()) NOT NULL,
     [UploadedBy]             INT             NOT NULL,
     CONSTRAINT [PK_PartAssetsAttachments] PRIMARY KEY CLUSTERED ([PartAssetsAttachmentID] ASC),
-    CONSTRAINT [FK_PartAssetsAttachments_PartAssets] FOREIGN KEY ([AssetID]) REFERENCES [dbo].[PartAssets] ([AssetID])
+    CONSTRAINT [FK_PartAssetsAttachments_PartAssets] FOREIGN KEY ([AssetID]) REFERENCES [dbo].[PartAssets] ([AssetID]),
+    CONSTRAINT [FK_PartAssetsAttachments_Users] FOREIGN KEY ([UploadedBy]) REFERENCES [dbo].[Users] ([UserID])
 );
 
 

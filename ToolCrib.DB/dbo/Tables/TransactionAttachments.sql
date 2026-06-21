@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[TransactionAttachments] (
     [MimeType]                NVARCHAR (50)   CONSTRAINT [DF_TransactionAttachments_MimeType] DEFAULT ('') NOT NULL,
     [FileSize]                INT             NOT NULL,
     [ImageActive]             BIT             NOT NULL,
-    [UploadedOn]              DATETIME2 (7)   CONSTRAINT [DF_TransactionAttachments_UploadedOn] DEFAULT (getdate()) NOT NULL,
+    [UploadedOn]              DATETIME2 (3)   CONSTRAINT [DF_TransactionAttachments_UploadedOn] DEFAULT (getdate()) NOT NULL,
     [UploadedBy]              INT             NOT NULL,
     CONSTRAINT [PK_TransactionAttachments] PRIMARY KEY CLUSTERED ([TransactionAttachmentID] ASC),
     CONSTRAINT [FK_TransactionAttachments_TransactionHistory] FOREIGN KEY ([TransactionID]) REFERENCES [dbo].[TransactionHistory] ([TransactionID]),
