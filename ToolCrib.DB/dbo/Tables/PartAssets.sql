@@ -20,15 +20,3 @@ CREATE TABLE [dbo].[PartAssets] (
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_PartAssets_UpdatedBy]
-    ON [dbo].[PartAssets]([UpdatedBy] ASC);
-
-
-GO
-
-CREATE NONCLUSTERED INDEX [IX_PartAssets_PartID]
-    ON [dbo].[PartAssets]([PartID] ASC);
-
-
-GO
-

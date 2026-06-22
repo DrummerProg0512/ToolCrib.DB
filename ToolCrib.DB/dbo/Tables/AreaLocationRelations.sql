@@ -13,21 +13,3 @@ CREATE TABLE [dbo].[AreaLocationRelations] (
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_AreaLocationRelations_UpdatedBy]
-    ON [dbo].[AreaLocationRelations]([UpdatedBy] ASC);
-
-
-GO
-
-CREATE NONCLUSTERED INDEX [IX_AreaLocationRelations_Parent]
-    ON [dbo].[AreaLocationRelations]([AreaLocationParentID] ASC);
-
-
-GO
-
-CREATE NONCLUSTERED INDEX [IX_AreaLocationRelations_Child]
-    ON [dbo].[AreaLocationRelations]([AreaLocationChildID] ASC);
-
-
-GO
-
