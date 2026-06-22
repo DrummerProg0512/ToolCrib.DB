@@ -13,6 +13,18 @@ CREATE TABLE [dbo].[UsersAreas] (
 
 GO
 
+CREATE NONCLUSTERED INDEX [IX_UsersAreas_UserID]
+    ON [dbo].[UsersAreas]([UserID] ASC);
+
+
+GO
+
+CREATE NONCLUSTERED INDEX [IX_UsersAreas_AreaLocationID]
+    ON [dbo].[UsersAreas]([AreaLocationID] ASC);
+
+
+GO
+
 EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'getdate()', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'UsersAreas', @level2type = N'COLUMN', @level2name = N'UpdatedOn';
 
 

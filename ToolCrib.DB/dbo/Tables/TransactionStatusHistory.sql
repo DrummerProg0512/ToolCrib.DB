@@ -14,3 +14,15 @@ CREATE TABLE [dbo].[TransactionStatusHistory] (
 
 GO
 
+CREATE NONCLUSTERED INDEX [IX_TransactionStatusHistory_TransactionID]
+    ON [dbo].[TransactionStatusHistory]([TransactionID] ASC);
+
+
+GO
+
+CREATE NONCLUSTERED INDEX [IX_TransactionStatusHistory_UpdatedBy]
+    ON [dbo].[TransactionStatusHistory]([UpdatedBy] ASC);
+
+
+GO
+

@@ -14,3 +14,21 @@ CREATE TABLE [dbo].[PartStorageLocations] (
 
 GO
 
+CREATE NONCLUSTERED INDEX [IX_PartStorageLocations_UpdatedBy]
+    ON [dbo].[PartStorageLocations]([UpdatedBy] ASC);
+
+
+GO
+
+CREATE NONCLUSTERED INDEX [IX_PartStorageLocations_PartID]
+    ON [dbo].[PartStorageLocations]([PartID] ASC);
+
+
+GO
+
+CREATE NONCLUSTERED INDEX [IX_PartStorageLocations_StorageLocationID]
+    ON [dbo].[PartStorageLocations]([StorageLocationID] ASC);
+
+
+GO
+

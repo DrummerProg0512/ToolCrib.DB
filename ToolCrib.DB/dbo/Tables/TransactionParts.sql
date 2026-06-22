@@ -14,3 +14,15 @@ CREATE TABLE [dbo].[TransactionParts] (
 
 GO
 
+CREATE NONCLUSTERED INDEX [IX_TransactionParts_PartID]
+    ON [dbo].[TransactionParts]([PartID] ASC);
+
+
+GO
+
+CREATE NONCLUSTERED INDEX [IX_TransactionParts_TransactionID]
+    ON [dbo].[TransactionParts]([TransactionID] ASC);
+
+
+GO
+
