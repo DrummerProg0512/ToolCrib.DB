@@ -15,9 +15,3 @@ CREATE TABLE [dbo].[AreaLocations] (
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_AreaLocations_UpdatedBy]
-    ON [dbo].[AreaLocations]([UpdatedBy] ASC);
-
-
-GO
-

@@ -18,15 +18,3 @@ CREATE TABLE [dbo].[PartAssetsAttachments] (
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_PartAssetsAttachments_AssetID]
-    ON [dbo].[PartAssetsAttachments]([AssetID] ASC);
-
-
-GO
-
-CREATE NONCLUSTERED INDEX [IX_PartAssetsAttachments_UploadedBy]
-    ON [dbo].[PartAssetsAttachments]([UploadedBy] ASC);
-
-
-GO
-

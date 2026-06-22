@@ -18,15 +18,3 @@ CREATE TABLE [dbo].[TransactionAttachments] (
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_TransactionAttachments_TransactionID]
-    ON [dbo].[TransactionAttachments]([TransactionID] ASC);
-
-
-GO
-
-CREATE NONCLUSTERED INDEX [IX_TransactionAttachments_UploadedBy]
-    ON [dbo].[TransactionAttachments]([UploadedBy] ASC);
-
-
-GO
-
