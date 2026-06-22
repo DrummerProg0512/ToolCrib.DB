@@ -13,14 +13,14 @@ CREATE TABLE [dbo].[TransactionHistory] (
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_TransactionHistory_TransactionTypeID]
-    ON [dbo].[TransactionHistory]([TransactionTypeID] ASC);
+CREATE NONCLUSTERED INDEX [IX_TransactionHistory_RequestedBy]
+    ON [dbo].[TransactionHistory]([RequestedBy] ASC);
 
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_TransactionHistory_RequestedBy]
-    ON [dbo].[TransactionHistory]([RequestedBy] ASC);
+CREATE NONCLUSTERED INDEX [IX_TransactionHistory_TransactionTypeID]
+    ON [dbo].[TransactionHistory]([TransactionTypeID] ASC);
 
 
 GO

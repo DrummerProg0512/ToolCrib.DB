@@ -10,14 +10,14 @@ CREATE TABLE [dbo].[TransactionAssets] (
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_TransactionAssets_TransactionID]
-    ON [dbo].[TransactionAssets]([TransactionID] ASC);
+CREATE NONCLUSTERED INDEX [IX_TransactionAssets_AssetID]
+    ON [dbo].[TransactionAssets]([AssetID] ASC);
 
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_TransactionAssets_AssetID]
-    ON [dbo].[TransactionAssets]([AssetID] ASC);
+CREATE NONCLUSTERED INDEX [IX_TransactionAssets_TransactionID]
+    ON [dbo].[TransactionAssets]([TransactionID] ASC);
 
 
 GO

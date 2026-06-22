@@ -19,14 +19,14 @@ CREATE NONCLUSTERED INDEX [IX_AreaLocationRelations_UpdatedBy]
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_AreaLocationRelations_Child]
-    ON [dbo].[AreaLocationRelations]([AreaLocationChildID] ASC);
+CREATE NONCLUSTERED INDEX [IX_AreaLocationRelations_Parent]
+    ON [dbo].[AreaLocationRelations]([AreaLocationParentID] ASC);
 
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_AreaLocationRelations_Parent]
-    ON [dbo].[AreaLocationRelations]([AreaLocationParentID] ASC);
+CREATE NONCLUSTERED INDEX [IX_AreaLocationRelations_Child]
+    ON [dbo].[AreaLocationRelations]([AreaLocationChildID] ASC);
 
 
 GO

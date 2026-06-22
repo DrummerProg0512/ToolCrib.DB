@@ -15,14 +15,14 @@ CREATE TABLE [dbo].[PartCostHistory] (
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_PartCostHistory_PartID]
-    ON [dbo].[PartCostHistory]([PartID] ASC);
+CREATE NONCLUSTERED INDEX [IX_PartCostHistory_CurrencyCodeID]
+    ON [dbo].[PartCostHistory]([CurrencyCodeID] ASC);
 
 
 GO
 
-CREATE NONCLUSTERED INDEX [IX_PartCostHistory_CurrencyCodeID]
-    ON [dbo].[PartCostHistory]([CurrencyCodeID] ASC);
+CREATE NONCLUSTERED INDEX [IX_PartCostHistory_PartID]
+    ON [dbo].[PartCostHistory]([PartID] ASC);
 
 
 GO
