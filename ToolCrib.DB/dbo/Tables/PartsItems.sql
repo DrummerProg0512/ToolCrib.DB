@@ -27,3 +27,15 @@ CREATE TABLE [dbo].[PartsItems] (
 
 GO
 
+CREATE NONCLUSTERED INDEX [IX_PartsItems_UpdatedBy]
+    ON [dbo].[PartsItems]([UpdatedBy] ASC);
+
+
+GO
+
+CREATE NONCLUSTERED INDEX [IX_PartsItems_VendorID]
+    ON [dbo].[PartsItems]([VendorID] ASC);
+
+
+GO
+

@@ -14,3 +14,15 @@ CREATE TABLE [dbo].[StorageLocations] (
 
 GO
 
+CREATE NONCLUSTERED INDEX [IX_StorageLocations_AreaLocationID]
+    ON [dbo].[StorageLocations]([AreaLocationID] ASC);
+
+
+GO
+
+CREATE NONCLUSTERED INDEX [IX_StorageLocations_StorageLocationTypeID]
+    ON [dbo].[StorageLocations]([StorageLocationTypeID] ASC);
+
+
+GO
+
